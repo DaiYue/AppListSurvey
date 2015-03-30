@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rtI-LP-AmD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rtI-LP-AmD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -36,13 +36,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热衷无印良品、日韩餐、日韩海淘、宜家（虽然是瑞典）、喜欢猫、多肉植物、五道营、田子坊" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-DM-C4h">
-                                <rect key="frame" x="16" y="189" width="288" height="191"/>
+                                <rect key="frame" x="16" y="177" width="288" height="191"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.10980392156862745" green="0.3529411764705882" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvX-6K-Dg9">
-                                <rect key="frame" x="141" y="141.5" width="39.5" height="24"/>
+                                <rect key="frame" x="140" y="130" width="40" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.35294117650000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,11 +51,12 @@
                         <color key="backgroundColor" red="0.98405462503433228" green="0.91963815689086914" blue="0.82963502407073975" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bBK-DM-C4h" firstAttribute="top" secondItem="AvX-6K-Dg9" secondAttribute="bottom" constant="23.5" id="3aA-dC-O2J"/>
-                            <constraint firstAttribute="centerY" secondItem="bBK-DM-C4h" secondAttribute="centerY" id="ALn-Ll-CAB"/>
+                            <constraint firstAttribute="centerY" secondItem="bBK-DM-C4h" secondAttribute="centerY" priority="749" id="ALn-Ll-CAB"/>
                             <constraint firstItem="bBK-DM-C4h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="OaC-de-LaN"/>
                             <constraint firstAttribute="centerX" secondItem="bBK-DM-C4h" secondAttribute="centerX" id="Q31-nB-6yg"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bBK-DM-C4h" secondAttribute="trailing" id="XVj-li-6tW"/>
                             <constraint firstAttribute="centerX" secondItem="AvX-6K-Dg9" secondAttribute="centerX" id="qEP-f9-Na7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bBK-DM-C4h" secondAttribute="bottom" constant="200" id="upj-jo-vDU"/>
                             <constraint firstItem="bBK-DM-C4h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="vnL-sc-myp"/>
                         </constraints>
                         <variation key="default">
@@ -65,7 +66,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FER-sK-bzB">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="9YN-5I-k9f"/>
+                        <barButtonItem key="backBarButtonItem" title="上一题" id="9YN-5I-k9f"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -77,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="213" y="327"/>
         </scene>
-        <!--View Controller-->
+        <!--结束-->
         <scene sceneID="uuc-zd-1QA">
             <objects>
-                <viewController storyboardIdentifier="EndVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17g-JI-RV2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17g-JI-RV2" userLabel="结束" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pye-bv-TM2"/>
                         <viewControllerLayoutGuide type="bottom" id="eOt-Ky-Wi5"/>
@@ -96,8 +97,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写一些结束语，如：谢谢您的参与，您将得到一栋豪华别墅 / 一辆炫酷跑车 / 一部崭新iPhone 6 Plus / 帮助别人的满足感和一天愉快的心情" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-4q-QIK">
-                                <rect key="frame" x="16" y="273" width="288" height="76.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="16" y="273" width="288" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.35294117650000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -115,9 +116,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85490196080000003" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="lFx-Tu-S6D" secondAttribute="centerY" constant="81" id="6do-NU-lgd"/>
+                            <constraint firstAttribute="centerY" secondItem="lFx-Tu-S6D" secondAttribute="centerY" priority="749" constant="81" id="6do-NU-lgd"/>
                             <constraint firstItem="ghv-As-r6u" firstAttribute="leading" secondItem="tkk-o9-Oe4" secondAttribute="leading" id="8vL-HL-vbM"/>
                             <constraint firstItem="YE8-4q-QIK" firstAttribute="leading" secondItem="tkk-o9-Oe4" secondAttribute="leadingMargin" id="IiW-38-BFS"/>
+                            <constraint firstItem="ghv-As-r6u" firstAttribute="top" secondItem="YE8-4q-QIK" secondAttribute="bottom" constant="15" id="Nag-yh-eTl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YE8-4q-QIK" secondAttribute="trailing" id="URN-SA-24n"/>
                             <constraint firstAttribute="centerY" secondItem="YE8-4q-QIK" secondAttribute="centerY" constant="6.5" id="Umq-ZJ-s4G"/>
                             <constraint firstItem="eOt-Ky-Wi5" firstAttribute="top" secondItem="ghv-As-r6u" secondAttribute="bottom" id="Y0F-tQ-IYf"/>
@@ -156,12 +158,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEa-qP-ZFk">
                                 <rect key="frame" x="139" y="273" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里是一些参与调查的说明。如：  欢迎参加xxxx调查，接下来请选择符合自己情况的选项。Have a nice day!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zil-6u-4GN">
-                                <rect key="frame" x="16" y="244.5" width="288" height="76.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="16" y="211" width="288" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.35294117650000001" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -170,7 +172,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hjd-pA-8Wt" secondAttribute="height" multiplier="6:3" id="R2w-R9-XiP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="开始吧！" backgroundImage="bg2.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,8 +191,9 @@
                             <constraint firstItem="zil-6u-4GN" firstAttribute="trailing" secondItem="zTc-11-nnt" secondAttribute="trailingMargin" id="etM-F1-i8h"/>
                             <constraint firstItem="hjd-pA-8Wt" firstAttribute="leading" secondItem="zTc-11-nnt" secondAttribute="leading" id="kS4-wu-60C"/>
                             <constraint firstItem="8lb-MC-JJj" firstAttribute="top" secondItem="hjd-pA-8Wt" secondAttribute="bottom" id="n8X-Ho-Bdt"/>
-                            <constraint firstAttribute="centerY" secondItem="zil-6u-4GN" secondAttribute="centerY" constant="1.25" id="qIt-AI-TU3"/>
+                            <constraint firstAttribute="centerY" secondItem="zil-6u-4GN" secondAttribute="centerY" priority="749" constant="1" id="qIt-AI-TU3"/>
                             <constraint firstAttribute="centerX" secondItem="zil-6u-4GN" secondAttribute="centerX" id="tfx-22-RvY"/>
+                            <constraint firstItem="hjd-pA-8Wt" firstAttribute="top" secondItem="zil-6u-4GN" secondAttribute="bottom" constant="53" id="tly-RY-9QK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -202,7 +205,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Mo2-Dw-Sgi"/>
+                    <navigationItem key="navigationItem" id="Mo2-Dw-Sgi">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="QjP-Mo-JEy"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XzI-MM-J86" userLabel="First Responder" sceneMemberID="firstResponder"/>

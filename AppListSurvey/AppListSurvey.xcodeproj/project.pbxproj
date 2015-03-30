@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66ADF8C71AC9BC220009C421 /* LocalInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */; };
 		EEF2CD241AC7D8AF00932E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD231AC7D8AF00932E12 /* AppDelegate.swift */; };
 		EEF2CD261AC7D8AF00932E12 /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */; };
 		EEF2CD291AC7D8AF00932E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD271AC7D8AF00932E12 /* Main.storyboard */; };
@@ -32,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66ADF8C41AC9BC220009C421 /* AppListSurvey-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppListSurvey-Bridging-Header.h"; path = "manager/AppListSurvey-Bridging-Header.h"; sourceTree = "<group>"; };
+		66ADF8C51AC9BC220009C421 /* LocalInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalInfoManager.h; sourceTree = "<group>"; };
+		66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalInfoManager.m; sourceTree = "<group>"; };
 		EEF2CD1E1AC7D8AF00932E12 /* AppListSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppListSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2CD221AC7D8AF00932E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF2CD231AC7D8AF00932E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66ADF8C21AC9B8900009C421 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */,
+				EEF2CD471AC7FFFA00932E12 /* WelcomeVC.swift */,
+				EEF2CD491AC801A000932E12 /* NavigationHandler.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		66ADF8C31AC9BBA90009C421 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				66ADF8C51AC9BC220009C421 /* LocalInfoManager.h */,
+				66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		EEF2CD151AC7D8AF00932E12 = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +112,10 @@
 		EEF2CD201AC7D8AF00932E12 /* AppListSurvey */ = {
 			isa = PBXGroup;
 			children = (
+				66ADF8C31AC9BBA90009C421 /* manager */,
+				66ADF8C21AC9B8900009C421 /* controller */,
 				EEF2CD5F1AC8067000932E12 /* model */,
 				EEF2CD231AC7D8AF00932E12 /* AppDelegate.swift */,
-				EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */,
-				EEF2CD471AC7FFFA00932E12 /* WelcomeVC.swift */,
-				EEF2CD491AC801A000932E12 /* NavigationHandler.swift */,
 				EEF2CD271AC7D8AF00932E12 /* Main.storyboard */,
 				EEF2CD2A1AC7D8AF00932E12 /* Images.xcassets */,
 				EEF2CD2C1AC7D8AF00932E12 /* LaunchScreen.xib */,
@@ -105,6 +127,7 @@
 		EEF2CD211AC7D8AF00932E12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				66ADF8C41AC9BC220009C421 /* AppListSurvey-Bridging-Header.h */,
 				EEF2CD431AC7FA4A00932E12 /* bg1.png */,
 				EEF2CD441AC7FA4A00932E12 /* bg2.png */,
 				EEF2CD221AC7D8AF00932E12 /* Info.plist */,
@@ -187,6 +210,7 @@
 				TargetAttributes = {
 					EEF2CD1D1AC7D8AF00932E12 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XFCDXZK26Z;
 					};
 					EEF2CD321AC7D8AF00932E12 = {
 						CreatedOnToolsVersion = 6.2;
@@ -241,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF2CD4A1AC801A000932E12 /* NavigationHandler.swift in Sources */,
+				66ADF8C71AC9BC220009C421 /* LocalInfoManager.m in Sources */,
 				EEF2CD611AC8069C00932E12 /* SurveyQuestion.swift in Sources */,
 				EEF2CD5E1AC8052000932E12 /* QuestionnaireStore.swift in Sources */,
 				EEF2CD481AC7FFFA00932E12 /* WelcomeVC.swift in Sources */,
@@ -368,9 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppListSurvey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppListSurvey/manager/AppListSurvey-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -378,9 +406,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppListSurvey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppListSurvey/manager/AppListSurvey-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -437,6 +467,7 @@
 				EEF2CD3F1AC7D8AF00932E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEF2CD401AC7D8AF00932E12 /* Build configuration list for PBXNativeTarget "AppListSurveyTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +476,7 @@
 				EEF2CD421AC7D8AF00932E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
