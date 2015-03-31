@@ -18,4 +18,9 @@ class SurveyResultStore: NSObject {
         }
         return Static.instance
     }
+
+    func sendResult() -> Bool {
+        let resultObject = AVObject(className: "SurveyResult", dictionary: result.dictionary())
+        return resultObject.save()
+    }
 }

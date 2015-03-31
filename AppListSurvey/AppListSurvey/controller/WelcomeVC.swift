@@ -12,6 +12,7 @@ class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchLocalInfo()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -37,7 +38,7 @@ class WelcomeVC: UIViewController {
 
         // appList
         for appInfoDictionary in LocalInfoFetcher.appList() {
-            let appInfo = AppInfo(appInfoDictionary: appInfoDictionary as [String:String])
+            let appInfo = AppInfo(appInfoDictionary: appInfoDictionary as NSDictionary)
             surveyResult.addApp(appInfo)
         }
     }

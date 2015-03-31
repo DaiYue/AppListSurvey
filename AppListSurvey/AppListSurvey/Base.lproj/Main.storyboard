@@ -141,6 +141,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="sendStatisticsButton" destination="ghv-As-r6u" id="UCg-RB-7ip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLq-3z-wIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

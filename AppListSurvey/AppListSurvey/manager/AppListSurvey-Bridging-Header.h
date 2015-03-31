@@ -3,3 +3,4 @@
 //
 
 #import "LocalInfoFetcher.h"
+#import "AVOSCloud/AVOSCloud.h"
