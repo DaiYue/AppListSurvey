@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LocalInfoManager : NSObject
+@interface LocalInfoFetcher : NSObject
 
-+ (void)getLocalInfo;
++ (NSString *)deviceVersion;
++ (NSString*)systemVersion;
++ (NSArray*)appList;
 
 @end

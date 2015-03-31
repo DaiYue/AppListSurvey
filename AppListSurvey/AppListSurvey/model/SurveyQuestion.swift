@@ -9,11 +9,7 @@
 import UIKit
 
 struct SurveyQuestion {
-    var question:String
-    var answers:Array<String>
-
-    init(question:String, answers:Array<String>) {
-        self.question = question
-        self.answers = answers
-    }
+    let questionId:String
+    let question:String
+    let answers:Array<String>
 }

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66ADF8C71AC9BC220009C421 /* LocalInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */; };
+		66ADF8C71AC9BC220009C421 /* LocalInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ADF8C61AC9BC220009C421 /* LocalInfoFetcher.m */; };
+		EE10A6101ACABFFC00B5C661 /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10A60E1ACABFFC00B5C661 /* SurveyVC.swift */; };
+		EE10A6111ACABFFC00B5C661 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10A60F1ACABFFC00B5C661 /* WelcomeVC.swift */; };
+		EE10A6131ACAC08B00B5C661 /* EndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10A6121ACAC08B00B5C661 /* EndVC.swift */; };
+		EE11B8931ACA8A3500163B09 /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11B8921ACA8A3500163B09 /* SurveyResult.swift */; };
+		EE11B8971ACA8BFA00163B09 /* SurveyResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11B8961ACA8BFA00163B09 /* SurveyResultStore.swift */; };
 		EEF2CD241AC7D8AF00932E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD231AC7D8AF00932E12 /* AppDelegate.swift */; };
-		EEF2CD261AC7D8AF00932E12 /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */; };
 		EEF2CD291AC7D8AF00932E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD271AC7D8AF00932E12 /* Main.storyboard */; };
 		EEF2CD2B1AC7D8AF00932E12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD2A1AC7D8AF00932E12 /* Images.xcassets */; };
 		EEF2CD2E1AC7D8AF00932E12 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD2C1AC7D8AF00932E12 /* LaunchScreen.xib */; };
 		EEF2CD3A1AC7D8AF00932E12 /* AppListSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD391AC7D8AF00932E12 /* AppListSurveyTests.swift */; };
 		EEF2CD451AC7FA4A00932E12 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD431AC7FA4A00932E12 /* bg1.png */; };
 		EEF2CD461AC7FA4A00932E12 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = EEF2CD441AC7FA4A00932E12 /* bg2.png */; };
-		EEF2CD481AC7FFFA00932E12 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD471AC7FFFA00932E12 /* WelcomeVC.swift */; };
 		EEF2CD4A1AC801A000932E12 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD491AC801A000932E12 /* NavigationHandler.swift */; };
 		EEF2CD5E1AC8052000932E12 /* QuestionnaireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD5D1AC8052000932E12 /* QuestionnaireStore.swift */; };
 		EEF2CD611AC8069C00932E12 /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2CD601AC8069C00932E12 /* SurveyQuestion.swift */; };
@@ -34,12 +37,16 @@
 
 /* Begin PBXFileReference section */
 		66ADF8C41AC9BC220009C421 /* AppListSurvey-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppListSurvey-Bridging-Header.h"; path = "manager/AppListSurvey-Bridging-Header.h"; sourceTree = "<group>"; };
-		66ADF8C51AC9BC220009C421 /* LocalInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalInfoManager.h; sourceTree = "<group>"; };
-		66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalInfoManager.m; sourceTree = "<group>"; };
+		66ADF8C51AC9BC220009C421 /* LocalInfoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalInfoFetcher.h; sourceTree = "<group>"; };
+		66ADF8C61AC9BC220009C421 /* LocalInfoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalInfoFetcher.m; sourceTree = "<group>"; };
+		EE10A60E1ACABFFC00B5C661 /* SurveyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
+		EE10A60F1ACABFFC00B5C661 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		EE10A6121ACAC08B00B5C661 /* EndVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndVC.swift; sourceTree = "<group>"; };
+		EE11B8921ACA8A3500163B09 /* SurveyResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
+		EE11B8961ACA8BFA00163B09 /* SurveyResultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyResultStore.swift; sourceTree = "<group>"; };
 		EEF2CD1E1AC7D8AF00932E12 /* AppListSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppListSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2CD221AC7D8AF00932E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF2CD231AC7D8AF00932E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		EEF2CD281AC7D8AF00932E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEF2CD2A1AC7D8AF00932E12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EEF2CD2D1AC7D8AF00932E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,8 +55,7 @@
 		EEF2CD391AC7D8AF00932E12 /* AppListSurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListSurveyTests.swift; sourceTree = "<group>"; };
 		EEF2CD431AC7FA4A00932E12 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
 		EEF2CD441AC7FA4A00932E12 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
-		EEF2CD471AC7FFFA00932E12 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
-		EEF2CD491AC801A000932E12 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		EEF2CD491AC801A000932E12 /* NavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationHandler.swift; path = ../NavigationHandler.swift; sourceTree = "<group>"; };
 		EEF2CD5D1AC8052000932E12 /* QuestionnaireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionnaireStore.swift; path = ../QuestionnaireStore.swift; sourceTree = "<group>"; };
 		EEF2CD601AC8069C00932E12 /* SurveyQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,18 +81,19 @@
 		66ADF8C21AC9B8900009C421 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				EEF2CD251AC7D8AF00932E12 /* SurveyVC.swift */,
-				EEF2CD471AC7FFFA00932E12 /* WelcomeVC.swift */,
-				EEF2CD491AC801A000932E12 /* NavigationHandler.swift */,
+				EE10A60E1ACABFFC00B5C661 /* SurveyVC.swift */,
+				EE10A60F1ACABFFC00B5C661 /* WelcomeVC.swift */,
+				EE10A6121ACAC08B00B5C661 /* EndVC.swift */,
 			);
-			name = controller;
+			path = controller;
 			sourceTree = "<group>";
 		};
 		66ADF8C31AC9BBA90009C421 /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				66ADF8C51AC9BC220009C421 /* LocalInfoManager.h */,
-				66ADF8C61AC9BC220009C421 /* LocalInfoManager.m */,
+				66ADF8C51AC9BC220009C421 /* LocalInfoFetcher.h */,
+				66ADF8C61AC9BC220009C421 /* LocalInfoFetcher.m */,
+				EEF2CD491AC801A000932E12 /* NavigationHandler.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -155,8 +162,10 @@
 		EEF2CD5F1AC8067000932E12 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				EEF2CD5D1AC8052000932E12 /* QuestionnaireStore.swift */,
 				EEF2CD601AC8069C00932E12 /* SurveyQuestion.swift */,
+				EEF2CD5D1AC8052000932E12 /* QuestionnaireStore.swift */,
+				EE11B8921ACA8A3500163B09 /* SurveyResult.swift */,
+				EE11B8961ACA8BFA00163B09 /* SurveyResultStore.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -264,12 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE10A6101ACABFFC00B5C661 /* SurveyVC.swift in Sources */,
 				EEF2CD4A1AC801A000932E12 /* NavigationHandler.swift in Sources */,
-				66ADF8C71AC9BC220009C421 /* LocalInfoManager.m in Sources */,
+				66ADF8C71AC9BC220009C421 /* LocalInfoFetcher.m in Sources */,
+				EE11B8971ACA8BFA00163B09 /* SurveyResultStore.swift in Sources */,
+				EE10A6131ACAC08B00B5C661 /* EndVC.swift in Sources */,
+				EE11B8931ACA8A3500163B09 /* SurveyResult.swift in Sources */,
 				EEF2CD611AC8069C00932E12 /* SurveyQuestion.swift in Sources */,
+				EE10A6111ACABFFC00B5C661 /* WelcomeVC.swift in Sources */,
 				EEF2CD5E1AC8052000932E12 /* QuestionnaireStore.swift in Sources */,
-				EEF2CD481AC7FFFA00932E12 /* WelcomeVC.swift in Sources */,
-				EEF2CD261AC7D8AF00932E12 /* SurveyVC.swift in Sources */,
 				EEF2CD241AC7D8AF00932E12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,9 +406,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AppListSurvey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AppListSurvey/manager/AppListSurvey-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -407,9 +422,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AppListSurvey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AppListSurvey/manager/AppListSurvey-Bridging-Header.h";
 			};
 			name = Release;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rtI-LP-AmD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rtI-LP-AmD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -81,7 +81,7 @@
         <!--结束-->
         <scene sceneID="uuc-zd-1QA">
             <objects>
-                <viewController storyboardIdentifier="EndVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17g-JI-RV2" userLabel="结束" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="17g-JI-RV2" userLabel="结束" customClass="EndVC" customModule="AppListSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pye-bv-TM2"/>
                         <viewControllerLayoutGuide type="bottom" id="eOt-Ky-Wi5"/>
@@ -112,6 +112,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendStatisticsAction:" destination="17g-JI-RV2" eventType="touchUpInside" id="Wbo-Xn-Pfv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63921568630000003" green="0.85490196080000003" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>

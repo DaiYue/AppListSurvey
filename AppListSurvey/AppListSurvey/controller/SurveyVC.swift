@@ -19,22 +19,24 @@ class SurveyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let questionnaire = QuestionnaireStore.sharedInstance
+
         // model
-        question = QuestionnaireStore.question(index: questionIndex)
+        question = questionnaire.question(index: questionIndex)
 
         // progress
-        self.progressLabel.text = String(format: "%d/%d", questionIndex + 1, QuestionnaireStore.totalQuestionCount())
+        self.progressLabel.text = String(format: "%d/%d", questionIndex + 1, questionnaire.totalQuestionCount())
 
         // question
         self.questionLabel.text = question.question
 
         // answers
-        var screenWidth = UIScreen.mainScreen().bounds.width
-        var screenHeight = UIScreen.mainScreen().bounds.height
-        var width = Float(screenWidth) / Float(question.answers.count)
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        let screenHeight = UIScreen.mainScreen().bounds.height
+        let width = Float(screenWidth) / Float(question.answers.count)
         for var i = 0; i < question.answers.count; i++ {
-            var answer = question.answers[i]
-            var button = answerButton(title: answer, tag: i)
+            let answer = question.answers[i]
+            let button = answerButton(title: answer, tag: i)
             button.frame = CGRectMake(CGFloat(Float(i) * Float(width)), CGFloat(Float(screenHeight) - width), CGFloat(width), CGFloat(width))
             self.view.addSubview(button)
         }
@@ -42,13 +44,12 @@ class SurveyVC: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - View
+    // MARK: - Views
 
     func answerButton(#title:String, tag:Int) -> UIButton! {
-        var button = UIButton()
+        let button = UIButton()
         button.setTitle(title, forState: UIControlState.Normal)
         button.tag = tag
         var fontSize:Int
@@ -71,10 +72,16 @@ class SurveyVC: UIViewController {
         return button
     }
 
-    // MARK: - Action
+    // MARK: - Actions
 
     func answerClickedAction(sender: AnyObject) {
-        if questionIndex + 1 >= QuestionnaireStore.totalQuestionCount() {
+        // save answer
+        let surveyResult = SurveyResultStore.sharedInstance.result
+        let choice = String(sender.tag)
+        surveyResult.saveAnswer(questionId: question.questionId, choice: choice)
+
+        // goto next question
+        if questionIndex + 1 >= QuestionnaireStore.sharedInstance.totalQuestionCount() {
             NavigationHandler.jumpToEndVC()
         } else {
             NavigationHandler.jumpToSurveyVC(questionIndex: questionIndex + 1)
