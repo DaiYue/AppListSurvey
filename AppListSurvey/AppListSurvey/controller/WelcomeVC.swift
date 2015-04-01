@@ -12,7 +12,7 @@ class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchLocalInfo()
+        SurveyResultStore.sharedInstance.fetchLocalInfo()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -28,20 +28,6 @@ class WelcomeVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Fetch local info
-
-    func fetchLocalInfo() {
-        let surveyResult = SurveyResultStore.sharedInstance.result
-
-        // deviceInfo
-        surveyResult.deviceInfo = DeviceInfo(iOSVersion:LocalInfoFetcher.systemVersion(), deviceVersion:LocalInfoFetcher.deviceVersion())
-
-        // appList
-        for appInfoDictionary in LocalInfoFetcher.appList() {
-            let appInfo = AppInfo(appInfoDictionary: appInfoDictionary as NSDictionary)
-            surveyResult.addApp(appInfo)
-        }
-    }
 
     // MARK: - Actions
 

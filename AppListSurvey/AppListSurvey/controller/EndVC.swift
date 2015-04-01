@@ -26,7 +26,7 @@ class EndVC: UIViewController {
             sendStatisticsButton.setTitle("发送成功:)", forState: UIControlState.Normal)
             sendStatisticsButton.enabled = false
         } else {
-            sendStatisticsButton.setTitle("发送失败:)", forState: UIControlState.Normal)
+            sendStatisticsButton.setTitle("发送失败:(", forState: UIControlState.Normal)
             sendStatisticsButton.enabled = true
         }
     }

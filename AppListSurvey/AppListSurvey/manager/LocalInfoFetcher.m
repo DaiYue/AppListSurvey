@@ -12,6 +12,8 @@
 #import <sys/utsname.h>
 #include <objc/runtime.h>
 
+static NSString* const kDeviceUUIDKey = @"deviceUUID";
+
 @implementation LocalInfoFetcher
 
 /*
@@ -127,6 +129,18 @@
     }
 
     dictionary[key] = object;
+}
+
++ (NSString*)deviceUUID {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+
+    NSString* deviceUUID = [defaults objectForKey:kDeviceUUIDKey];
+    if (deviceUUID == nil) {
+        deviceUUID = [[NSUUID UUID] UUIDString];
+        [defaults setObject:deviceUUID forKey:@"deviceUUID"];
+    }
+
+    return deviceUUID;
 }
 
 @end

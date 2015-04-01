@@ -19,6 +19,20 @@ class SurveyResultStore: NSObject {
         return Static.instance
     }
 
+    func fetchLocalInfo() {
+        // deviceUUID
+        result.deviceUUID = LocalInfoFetcher.deviceUUID()
+        
+        // deviceInfo
+        result.deviceInfo = DeviceInfo(iOSVersion:LocalInfoFetcher.systemVersion(), deviceVersion:LocalInfoFetcher.deviceVersion())
+
+        // appList
+        for appInfoDictionary in LocalInfoFetcher.appList() {
+            let appInfo = AppInfo(appInfoDictionary: appInfoDictionary as NSDictionary)
+            result.addApp(appInfo)
+        }
+    }
+
     func sendResult() -> Bool {
         let resultObject = AVObject(className: "SurveyResult", dictionary: result.dictionary())
         return resultObject.save()

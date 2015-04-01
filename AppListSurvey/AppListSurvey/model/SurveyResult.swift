@@ -9,9 +9,10 @@
 import UIKit
 
 class SurveyResult {
-    var answers:[String:SurveyAnswer]
-    var appList:[AppInfo]
+    var deviceUUID:String!
     var deviceInfo:DeviceInfo!
+    var appList:[AppInfo]
+    var answers:[String:SurveyAnswer]
 
     init () {
         answers = [:]
@@ -39,7 +40,8 @@ class SurveyResult {
 
         return ["answers":answersDictionary,
                 "appList":appListArray,
-            "deviceInfo":deviceInfo.dictionary()];
+             "deviceInfo":deviceInfo.dictionary(),
+             "deviceUUID":deviceUUID];
     }
 }
 
@@ -79,14 +81,14 @@ struct AppInfo {
     var bundleId:String?
     var type:String?
     var version:String?
-    var appId:String?
+    var appId:NSNumber?
     var appName:String?
 
     init(appInfoDictionary:NSDictionary) {
         bundleId = appInfoDictionary["bundleId"] as? String
         type = appInfoDictionary["type"] as? String
         version = appInfoDictionary["version"] as? String
-        appId = appInfoDictionary["appId"] as? String
+        appId = appInfoDictionary["appId"] as? NSNumber
         appName = appInfoDictionary["appName"] as? String
     }
 
@@ -102,7 +104,7 @@ struct AppInfo {
         if version != nil {
             dict["version"] = version
         }
-        if appId != nil {
+        if appId != nil && appId?.integerValue != 0 {
             dict["appId"] = appId
         }
         if appName != nil {
