@@ -17,6 +17,8 @@ static NSString* const kDeviceUUIDKey = @"deviceUUID";
 @implementation LocalInfoFetcher
 
 /*
+ 设备对应关系如下：
+
  if ([platform isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
  if ([platform isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
  if ([platform isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
@@ -49,6 +51,8 @@ static NSString* const kDeviceUUIDKey = @"deviceUUID";
 }
 
 /*
+
+ 可读取的app属性如下：
 
  @property(readonly) NSArray * UIBackgroundModes;
  @property(readonly) NSArray * VPNPlugins;

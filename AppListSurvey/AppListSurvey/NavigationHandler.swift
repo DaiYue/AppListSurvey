@@ -8,6 +8,7 @@
 
 import UIKit
 
+/** 管理跳转 */
 class NavigationHandler: NSObject {
 
     class func mainNavigationController() -> UINavigationController {
@@ -17,6 +18,7 @@ class NavigationHandler: NSObject {
         return rootNavigationController
     }
 
+    /** 跳转到问题页 */
     class func jumpToSurveyVC(#questionIndex:Int){
         let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let nextVC = storyBoard.instantiateViewControllerWithIdentifier("SurveyVC") as SurveyVC
@@ -25,6 +27,7 @@ class NavigationHandler: NSObject {
         mainNavigationController().pushViewController(nextVC, animated: true)
     }
 
+    /** 跳转到结束页 */
     class func jumpToEndVC(){
         let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let endVC = storyBoard.instantiateViewControllerWithIdentifier("EndVC") as UIViewController

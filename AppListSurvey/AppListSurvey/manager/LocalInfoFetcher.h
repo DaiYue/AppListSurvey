@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/// 用于获取设备信息，如系统版本、手机型号和 app list 等
 @interface LocalInfoFetcher : NSObject
 
 /** 设备唯一ID，第一次启动时生成，保存在UserDefault中 */

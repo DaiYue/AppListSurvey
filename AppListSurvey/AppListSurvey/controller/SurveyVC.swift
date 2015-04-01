@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 调查问题界面
 class SurveyVC: UIViewController {
 
     var questionIndex:Int!

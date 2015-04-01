@@ -8,6 +8,7 @@
 
 import UIKit
 
+/** 起始界面 */
 class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class WelcomeVC: UIViewController {
 
     @IBAction func startAction(sender: AnyObject) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+
         NavigationHandler.jumpToSurveyVC(questionIndex: 0)
     }
 

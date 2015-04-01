@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 结束界面
 class EndVC: UIViewController {
 
     @IBOutlet weak var sendStatisticsButton: UIButton!
